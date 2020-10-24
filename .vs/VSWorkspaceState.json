@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Hl7-DotNetCoreTest",
+    "\\Hl7-DotNetCoreTest\\test files",
+    "\\Hl7BatchFileGenerator",
+    "\\Hl7DotNetCore",
+    "\\Hl7DotNetCore\\Entities",
+    "\\Hl7DotNetCore\\Helpers",
+    "\\Hl7Generator",
+    "\\Hl7Generator.Test",
+    "\\Hl7Generator.Test\\test files",
+    "\\Hl7Sink"
+  ],
+  "SelectedNode": "\\Hl7DotNetCore\\Helpers\\SegmentHelper.cs",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Hl7Sink": {
+      "commandName": "Project",
+      "commandLineArgs": "startsink 9999"
+    }
+  }
+}

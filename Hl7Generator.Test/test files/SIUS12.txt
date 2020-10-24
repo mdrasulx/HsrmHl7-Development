@@ -1,0 +1,9 @@
+MSH|^~\&|SD-CCRA-HSRM|ccra.va.gov|SD-CCRA-VISTA|hl7.v02.med.va.gov|20190328151600||SIU^S12|6510069360108041z433|T|2.5.1|||AL|AL
+SCH||1959||||SCHEDULED|||30|min|^^^20190402151500^20190402154500|534_142201313^IMELDA^YORKUS^^^^^^^^^^Provider|^^^christopher.kegg@va.gov|||||||christopher.kegg@va.gov^^^^^^^^|||||SCHEDULED|
+PID|||1012866997V751520^^^USVHA^NI~101114^^^USVHA^IEN~666211277^^^USVHA^SSN||HSRMPAT ^Chris^^^^^L||19860515|M||||||||||1959|||||||||||
+PV1|||||||||||||||||||1959|||||||||||||||||||||||||20190328162200|
+RGS|1|U
+AIS|1|U|^Cardiac rehabilitation, up to 36 visits, no more than 3x per week **|20190402151500 (APT START)| (LENGTH OF APT)
+AIG|1||534_142201313^IMELDA YORKUS^|Provider^Provider|
+AIL|1|A|1008675310^^^^^^^^LincolnHealth Wellness and Rehab - MMC|1008675310^LincolnHealth Wellness and Rehab - MMC^|^^
+AIP|1|A|534_142201313^IMELDA^YORKUS^^^^^^ISC-TrakCare^^^^DN|Provider^Provider^

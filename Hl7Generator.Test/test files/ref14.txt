@@ -1,0 +1,60 @@
+MSH|^~\&|GMRC CCRA SEND|534|GMRC CCRA RECEIVE|200|20190528111320-0600||REF^I13|5001183932|T|2.5|||AL|AL|USA
+RF1|IP^ADDED COMMENT|ROUTINE|78^COMMUNITY CARE - CARDIOLOGY^^7845^COMMUNITY CARE CARDIOLOGY||O|500_2165|201905281110-0600||||
+PRD|RP|GINIEWSKI^PATTY^^^^^^^520824655|^^^^||^^^^^^||0
+PRD|PP|PROVIDER^ONE^^^^^^^983|^22^^NY^99998||^^^^^^||0
+PID|1|1009432570V847578|1009432570V847578^^^USVHA&&0363^NI^VA FACILITY ID&200M&L~666000201^^^USSSA&&0363^SS^VA FACILITY ID&500&L~^^^USDOD&&0363^TIN^VA FACILITY ID&500&L~^^^USDOD&&0363^FIN^VA FACILITY ID&500&L~100147^^^USVHA&&0363^PI^VA FACILITY ID&500&L~^^^USSSA&&0363^SS^VA FACILITY ID&500&L^^20190528||HSRMPAT-PCP^PATTY^^^^^L~^^^^^^N~P201^^^^^^A|^^^^^^M|19350407|M|||Any Street^^Any Town^WV^^^P^^~^^^^^^N||(222)555-8235^PRN^PH~(222)555-7720^WPN^PH|(222)555-7720|||||666000201||||||||||||
+IN1|1|VA102727|7|BLUE CROSS & BS IL|300 E RANDOLPH ST^^CHICAGO^IL^60601-5099^USA^M||""|GNCCRA123|GNCCRA|||20180901|""||CI|HSRMPAT-PCP,PATTY|v||||PRIMARY|||||||||||YES||||SUBPID
+IN3||||||||||||||||||||^YES
+DG1|1||R51.^Headache|||W
+OBR|1|49741;5158^OR|2165;GMRC^GMRC|ZZ||20190528
+PV1|1|O|^^^&581||||||||||||||
+NTE|1||Author\R\\R\GINIEWSKI,PATTY
+NTE|2||Datetime\R\\R\20190528111318-0600
+NTE|3||Comment\R\\R\
+NTE|4|L|Activity Comment
+NTE|5||SEOC - VHA Office of Community Care--------------------
+NTE|6||VHA Office of Community Care - Standardized Episode of Care
+NTE|7||ACUPUNCTURE - Acupuncture Initial
+NTE|8||SEOC ID: PMR_ACUPUNCTURE INITIAL_1.0.5
+NTE|9||Description: This initial authorization covers services associated with
+NTE|10||all acupuncture care listed below for the referred condition on the
+NTE|11||consult.
+NTE|12||Duration: 45 days
+NTE|13||Procedural Overview
+NTE|14||1.   Initial outpatient evaluation for this episode of care 2.   A maximum
+NTE|15||of twelve (12) acupuncture visits is approved for this episode of care.
+NTE|16||Approved services include acupuncture with or without electrostimulation.
+NTE|17||A maximum of one additional unit of acupuncture (with or without
+NTE|18||electrostimulation) is allowed when the re-insertion of needles is
+NTE|19||supported in medical documentation. 3.  If indicated, approved modalities
+NTE|20||that can be utilized during the approved acupuncture visits noted in #2
+NTE|21||above can include: manual therapy and therapeutic exercise procedures
+NTE|22||including but not limited to:  cupping, myofascial release, and
+NTE|23||therapeutic exercises. 4.  Outpatient re-evaluation during this episode of
+NTE|24||care as clinically indicated.
+NTE|25||*Additional acupuncture care beyond this trial must provide documentation
+NTE|26||of:  Objective measures demonstrating the extent of meaningful clinical
+NTE|27||improvement to date; and rationale for the additional treatment requested
+NTE|28||(e.g. to reach further durable improvement, or for ongoing pain
+NTE|29||management); and any further information supporting the need for
+NTE|30||additional care *Additional consultations needed relevant to the patient
+NTE|31||complaint/condition require VA review and approval.
+NTE|32||SEO-------------------------------------------------
+NTE|33||SEV-Specific Choice Eligibility: Service Not Available
+NTE|34||CAP-Community Care Approved, Program:
+NTE|35||Dental - 1712
+NTE|36||CCH-Community Care Appt Scheduling to be handled by: VA Staff
+NTE|37||Admin Screening for Care Coordination
+NTE|38||SCD-Screening Code: 007-77-TR-A-XX
+NTE|39||Urgency: not within 48 hrs
+NTE|40||CAN Score: 75 to 90
+NTE|41||Admin Screening Care Coordination: Moderate
+NTE|42||Clinical Triage: Required
+NTE|43||Clinical Triage needed for Care Coordination Assignment.
+NTE|44||Scheduler may proceed with scheduling of appointment in collaboration with
+NTE|45||Veteran and contractor, if applicable. Scheduler should alert the
+NTE|46||integrated team clinical staff member to perform clinical triage. After
+NTE|47||the clinical triage process is complete, scheduler should work with
+NTE|48||integrated team clinical staff to coordinate care based on the Veteran's
+NTE|49||needs.
+NTE|50||ICR-Initiate Community Care Referral

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Hl7Generator": {
+      "commandName": "Project",
+      "commandLineArgs": "process ::1 9999 \"C:\\Users\\mrasul\\Documents\\HL7-Cloned\\HL7Tools\\samplefiles\\CommunityCare\\A-REF_I12-CPRS-RELEASED.txt\" -c 000_0000000200 -i 000v0000000101 -n \"MD,Rasul101\" -nt -rt -st -w 1"
+    }
+  }
+}

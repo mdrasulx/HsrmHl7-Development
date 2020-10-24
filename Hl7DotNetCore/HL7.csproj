@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Collections.Immutable" Version="1.5.0" />
+    <PackageReference Include="System.Runtime" Version="4.3.0" />
+    <PackageReference Include="System.Runtime.Extensions" Version="4.3.0" />
+    <PackageReference Include="System.Linq" Version="4.3.0" />
+    <PackageReference Include="System.Text.RegularExpressions" Version="4.3.0" />
+    <Content Include="Entities\Component.cs" />
+    <Content Include="Entities\ElementIndex.cs" />
+    <Content Include="Entities\Field.cs" />
+    <Content Include="Entities\Hl7Encoding.cs" />
+    <Content Include="Entities\Hl7Exception.cs" />
+    <Content Include="Entities\Message.cs" />
+    <Content Include="Entities\MessageElement.cs" />
+    <Content Include="Entities\Result.cs" />
+    <Content Include="Entities\Segment.cs" />
+    <Content Include="Entities\SubComponent.cs" />
+    <Content Include="Helpers\ComponentHelper.cs" />
+    <Content Include="Helpers\EncodingHelper.cs" />
+    <Content Include="Helpers\FieldHelper.cs" />
+    <Content Include="Helpers\Helper.cs" />
+    <Content Include="Helpers\MessageHelper.CreateMessages.cs" />
+    <Content Include="Helpers\MessageHelper.cs" />
+    <Content Include="Helpers\MessageHelper.GettersAndSetters.cs" />
+    <Content Include="Helpers\MshMessageHelper.cs" />
+    <Content Include="Helpers\MshSegmentHelper.cs" />
+    <Content Include="Helpers\SegmentHelper.cs" />
+  </ItemGroup>
+</Project>
