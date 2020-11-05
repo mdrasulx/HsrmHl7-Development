@@ -35,9 +35,9 @@ namespace Hl7BatchFileGenerator
             string server = this.tbServer.Text;
             int port = (int)this.nudPort.Value;
             int count = (int)this.nudNumToGenerate.Value;
-            int startIcn = (int)this.nudIdsStart.Value;
+            var startIcn = this.nudIdsStart.Text; // RA Notes: ICN Number changed to text
             int startRefs = (int)this.nudRefsStart.Value;
-            int siteId = (int)this.nudSiteId.Value;
+            var siteId = this.nudSiteId.Text; // RA Notes: Consult Id Changed to text
             string outFile = this.tbOutputFile.Text;
             if (!ValidateCommonFields(server, outFile, out string? error))
                 return SetOutputAndReturn(error);
@@ -135,21 +135,21 @@ namespace Hl7BatchFileGenerator
             return error == null;
         }
 
-        private static IEnumerable<string> GetLinesForSimpleFile(string server, int port, string file, int count, int siteId, int startConsultId,
-            int startIcnId, string name, string additionalArgs) =>
-            Enumerable.Range(0, count).Select(i => GetStringForLine(server, port, file, siteId, startConsultId + i, startIcnId + i, name, additionalArgs));
+        private static IEnumerable<string> GetLinesForSimpleFile(string server, int port, string file, int count, string siteId, int startConsultId,
+            string startIcnId, string name, string additionalArgs) =>
+            Enumerable.Range(0, count).Select(i => GetStringForLine(server, port, file, siteId + (i+1), startConsultId + i, startIcnId, name, additionalArgs));
 
-        private static IEnumerable<string> GetLinesForComplexFile(IEnumerable<Template> templates, string server, int port, int count, int siteId,
-            int startConsultId, int startIcnId)
+        private static IEnumerable<string> GetLinesForComplexFile(IEnumerable<Template> templates, string server, int port, int count, string siteId,
+            int startConsultId, string startIcnId)
         {
             return Enumerable.Range(0, count).Select(i =>
             {
                 Template currentTemplate = templates.ElementAt(i % templates.Count());
-                return GetStringForLine(server, port, currentTemplate.File, siteId, startConsultId + i, startIcnId + i, currentTemplate.Name, currentTemplate.Arguments, currentTemplate.Diagnosis, currentTemplate.Seoc);
+                return GetStringForLine(server, port, currentTemplate.File, siteId, startConsultId + i, startIcnId, currentTemplate.Name, currentTemplate.Arguments, currentTemplate.Diagnosis, currentTemplate.Seoc);
             });
         }
 
-        private static string GetStringForLine(string server, int port, string? file, int siteId, int consultIdEnd, int icnEnd, string? name, string? additionalArgs, string? diagnosis = null, string? seoc = null)
+        private static string GetStringForLine(string server, int port, string? file, string siteId, int consultIdEnd, string icnEnd, string? name, string? additionalArgs, string? diagnosis = null, string? seoc = null)
         {
             string args = string.IsNullOrWhiteSpace(additionalArgs) ? string.Empty : $" {additionalArgs}";
             if (!string.IsNullOrWhiteSpace(seoc))
@@ -157,7 +157,10 @@ namespace Hl7BatchFileGenerator
             if (!string.IsNullOrWhiteSpace(diagnosis))
                 args = $" -d \"{diagnosis}\"" + args;
             //return $"process {server} {port} {file} -c {siteId:D3}_{consultIdEnd:D10} -i {siteId:D3}v{icnEnd:D10} -n \"{name}{icnEnd}\" -nt -rt -st -w 1{args}";
-            return $"Hl7Generator.exe process {server} {port} {file} -c {siteId:D3}_{consultIdEnd:D10} -i {siteId:D3}v{icnEnd:D10} -n \"{name}{icnEnd}\" -nt -rt -st -w 1{args}";
+ //  return $"Hl7Generator.exe process {server} {port} {file} -c {siteId:D3}_{consultIdEnd:D10} -i {siteId:D3}v{icnEnd:D10} -n \"{name}{icnEnd}\" -nt -rt -st -w 1{args}";
+
+            return $"Hl7Generator.exe process {server} {port} {file} -c {siteId:D3} -i {icnEnd:D10} -n \"{name}\" -nt -rt -st -w 1{args}";
+
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)

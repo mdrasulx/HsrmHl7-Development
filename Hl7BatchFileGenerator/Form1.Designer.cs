@@ -43,10 +43,8 @@
             this.tbSimpleArgs = new System.Windows.Forms.TextBox();
             this.lOutputFile = new System.Windows.Forms.Label();
             this.tbOutputFile = new System.Windows.Forms.TextBox();
-            this.nudIdsStart = new System.Windows.Forms.NumericUpDown();
             this.nudRefsStart = new System.Windows.Forms.NumericUpDown();
-            this.tbOutput = new System.Windows.Forms.TextBox();
-            this.nudSiteId = new System.Windows.Forms.NumericUpDown();
+            this.tbOutput = new System.Windows.Forms.TextBox();            
             this.nudPort = new System.Windows.Forms.NumericUpDown();
             this.tcSubmitType = new System.Windows.Forms.TabControl();
             this.tpSimple = new System.Windows.Forms.TabPage();
@@ -68,11 +66,13 @@
             this.lComplexHl7 = new System.Windows.Forms.Label();
             this.lComplexVetName = new System.Windows.Forms.Label();
             this.lTemplates = new System.Windows.Forms.Label();
+            this.nudIdsStart = new System.Windows.Forms.TextBox();
+            this.nudSiteId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumToGenerate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudIdsStart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudRefsStart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSiteId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPort)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.nudSiteId)).BeginInit(); // RA notes
+            //((System.ComponentModel.ISupportInitialize)(this.nudIdsStart)).BeginInit();  // RA notes
             this.tcSubmitType.SuspendLayout();
             this.tpSimple.SuspendLayout();
             this.tpComplex.SuspendLayout();
@@ -81,7 +81,7 @@
             // btnGenerate
             // 
             this.btnGenerate.Location = new System.Drawing.Point(9, 409);
-            this.btnGenerate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGenerate.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(147, 28);
             this.btnGenerate.TabIndex = 10;
@@ -92,17 +92,17 @@
             // lIdsStart
             // 
             this.lIdsStart.AutoSize = true;
-            this.lIdsStart.Location = new System.Drawing.Point(9, 90);
+            this.lIdsStart.Location = new System.Drawing.Point(13, 125);
             this.lIdsStart.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lIdsStart.Name = "lIdsStart";
-            this.lIdsStart.Size = new System.Drawing.Size(134, 17);
+            this.lIdsStart.Size = new System.Drawing.Size(30, 17);
             this.lIdsStart.TabIndex = 999;
-            this.lIdsStart.Text = "ICN-Vet IDs Start at:";
+            this.lIdsStart.Text = "ICN:"; // RA Notes: Renamed "ICN-Vet IDs Start at" as ICN
             // 
             // lSiteId
             // 
             this.lSiteId.AutoSize = true;
-            this.lSiteId.Location = new System.Drawing.Point(9, 124);
+            this.lSiteId.Location = new System.Drawing.Point(13, 97);
             this.lSiteId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lSiteId.Name = "lSiteId";
             this.lSiteId.Size = new System.Drawing.Size(74, 17);
@@ -132,7 +132,7 @@
             // tbSimpleFileName
             // 
             this.tbSimpleFileName.Location = new System.Drawing.Point(181, 11);
-            this.tbSimpleFileName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbSimpleFileName.Margin = new System.Windows.Forms.Padding(4);
             this.tbSimpleFileName.MaxLength = 2000;
             this.tbSimpleFileName.Name = "tbSimpleFileName";
             this.tbSimpleFileName.Size = new System.Drawing.Size(320, 22);
@@ -161,7 +161,7 @@
             // tbServer
             // 
             this.tbServer.Location = new System.Drawing.Point(167, 17);
-            this.tbServer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbServer.Margin = new System.Windows.Forms.Padding(4);
             this.tbServer.MaxLength = 2000;
             this.tbServer.Name = "tbServer";
             this.tbServer.Size = new System.Drawing.Size(159, 22);
@@ -180,7 +180,7 @@
             // nudNumToGenerate
             // 
             this.nudNumToGenerate.Location = new System.Drawing.Point(167, 190);
-            this.nudNumToGenerate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudNumToGenerate.Margin = new System.Windows.Forms.Padding(4);
             this.nudNumToGenerate.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -213,7 +213,7 @@
             // tbSimpleArgs
             // 
             this.tbSimpleArgs.Location = new System.Drawing.Point(181, 75);
-            this.tbSimpleArgs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbSimpleArgs.Margin = new System.Windows.Forms.Padding(4);
             this.tbSimpleArgs.Name = "tbSimpleArgs";
             this.tbSimpleArgs.Size = new System.Drawing.Size(320, 22);
             this.tbSimpleArgs.TabIndex = 32;
@@ -231,28 +231,15 @@
             // tbOutputFile
             // 
             this.tbOutputFile.Location = new System.Drawing.Point(167, 222);
-            this.tbOutputFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbOutputFile.Margin = new System.Windows.Forms.Padding(4);
             this.tbOutputFile.Name = "tbOutputFile";
             this.tbOutputFile.Size = new System.Drawing.Size(159, 22);
             this.tbOutputFile.TabIndex = 9;
             // 
-            // nudIdsStart
-            // 
-            this.nudIdsStart.Location = new System.Drawing.Point(167, 87);
-            this.nudIdsStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.nudIdsStart.Maximum = new decimal(new int[] {
-            1000000000,
-            0,
-            0,
-            0});
-            this.nudIdsStart.Name = "nudIdsStart";
-            this.nudIdsStart.Size = new System.Drawing.Size(160, 22);
-            this.nudIdsStart.TabIndex = 4;
-            // 
             // nudRefsStart
             // 
             this.nudRefsStart.Location = new System.Drawing.Point(167, 156);
-            this.nudRefsStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudRefsStart.Margin = new System.Windows.Forms.Padding(4);
             this.nudRefsStart.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -265,7 +252,7 @@
             // tbOutput
             // 
             this.tbOutput.Location = new System.Drawing.Point(13, 446);
-            this.tbOutput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbOutput.Margin = new System.Windows.Forms.Padding(4);
             this.tbOutput.Multiline = true;
             this.tbOutput.Name = "tbOutput";
             this.tbOutput.ReadOnly = true;
@@ -275,13 +262,8 @@
             // 
             // nudSiteId
             // 
-            this.nudSiteId.Location = new System.Drawing.Point(167, 122);
-            this.nudSiteId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.nudSiteId.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
+            this.nudSiteId.Location = new System.Drawing.Point(167, 92);
+            this.nudSiteId.Margin = new System.Windows.Forms.Padding(4);
             this.nudSiteId.Name = "nudSiteId";
             this.nudSiteId.Size = new System.Drawing.Size(160, 22);
             this.nudSiteId.TabIndex = 5;
@@ -289,7 +271,7 @@
             // nudPort
             // 
             this.nudPort.Location = new System.Drawing.Point(167, 53);
-            this.nudPort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudPort.Margin = new System.Windows.Forms.Padding(4);
             this.nudPort.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -304,7 +286,7 @@
             this.tcSubmitType.Controls.Add(this.tpSimple);
             this.tcSubmitType.Controls.Add(this.tpComplex);
             this.tcSubmitType.Location = new System.Drawing.Point(353, 15);
-            this.tcSubmitType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tcSubmitType.Margin = new System.Windows.Forms.Padding(4);
             this.tcSubmitType.Name = "tcSubmitType";
             this.tcSubmitType.SelectedIndex = 0;
             this.tcSubmitType.Size = new System.Drawing.Size(584, 390);
@@ -319,9 +301,9 @@
             this.tpSimple.Controls.Add(this.lAdditionalArgs);
             this.tpSimple.Controls.Add(this.tbSimpleArgs);
             this.tpSimple.Location = new System.Drawing.Point(4, 25);
-            this.tpSimple.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpSimple.Margin = new System.Windows.Forms.Padding(4);
             this.tpSimple.Name = "tpSimple";
-            this.tpSimple.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpSimple.Padding = new System.Windows.Forms.Padding(4);
             this.tpSimple.Size = new System.Drawing.Size(576, 361);
             this.tpSimple.TabIndex = 0;
             this.tpSimple.Text = "Simple";
@@ -330,7 +312,7 @@
             // tbSimpleName
             // 
             this.tbSimpleName.Location = new System.Drawing.Point(181, 43);
-            this.tbSimpleName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbSimpleName.Margin = new System.Windows.Forms.Padding(4);
             this.tbSimpleName.Name = "tbSimpleName";
             this.tbSimpleName.Size = new System.Drawing.Size(320, 22);
             this.tbSimpleName.TabIndex = 31;
@@ -364,9 +346,9 @@
             this.tpComplex.Controls.Add(this.lComplexVetName);
             this.tpComplex.Controls.Add(this.lTemplates);
             this.tpComplex.Location = new System.Drawing.Point(4, 25);
-            this.tpComplex.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpComplex.Margin = new System.Windows.Forms.Padding(4);
             this.tpComplex.Name = "tpComplex";
-            this.tpComplex.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpComplex.Padding = new System.Windows.Forms.Padding(4);
             this.tpComplex.Size = new System.Drawing.Size(576, 361);
             this.tpComplex.TabIndex = 1;
             this.tpComplex.Text = "Complex";
@@ -375,7 +357,7 @@
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(441, 279);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 28);
             this.btnCancel.TabIndex = 56;
@@ -386,7 +368,7 @@
             // btnRemove
             // 
             this.btnRemove.Location = new System.Drawing.Point(441, 34);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(100, 28);
             this.btnRemove.TabIndex = 58;
@@ -397,7 +379,7 @@
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(441, 318);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(100, 28);
             this.btnAdd.TabIndex = 57;
@@ -411,7 +393,7 @@
             this.lbTemplates.HorizontalScrollbar = true;
             this.lbTemplates.ItemHeight = 16;
             this.lbTemplates.Location = new System.Drawing.Point(12, 32);
-            this.lbTemplates.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbTemplates.Margin = new System.Windows.Forms.Padding(4);
             this.lbTemplates.Name = "lbTemplates";
             this.lbTemplates.Size = new System.Drawing.Size(420, 132);
             this.lbTemplates.TabIndex = 50;
@@ -420,7 +402,7 @@
             // tbSeoc
             // 
             this.tbSeoc.Location = new System.Drawing.Point(144, 279);
-            this.tbSeoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbSeoc.Margin = new System.Windows.Forms.Padding(4);
             this.tbSeoc.Name = "tbSeoc";
             this.tbSeoc.Size = new System.Drawing.Size(288, 22);
             this.tbSeoc.TabIndex = 54;
@@ -428,7 +410,7 @@
             // tbDiagnosis
             // 
             this.tbDiagnosis.Location = new System.Drawing.Point(144, 247);
-            this.tbDiagnosis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbDiagnosis.Margin = new System.Windows.Forms.Padding(4);
             this.tbDiagnosis.Name = "tbDiagnosis";
             this.tbDiagnosis.Size = new System.Drawing.Size(288, 22);
             this.tbDiagnosis.TabIndex = 53;
@@ -436,7 +418,7 @@
             // tbComplexArgs
             // 
             this.tbComplexArgs.Location = new System.Drawing.Point(144, 311);
-            this.tbComplexArgs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbComplexArgs.Margin = new System.Windows.Forms.Padding(4);
             this.tbComplexArgs.Name = "tbComplexArgs";
             this.tbComplexArgs.Size = new System.Drawing.Size(288, 22);
             this.tbComplexArgs.TabIndex = 55;
@@ -444,7 +426,7 @@
             // tbComplexFile
             // 
             this.tbComplexFile.Location = new System.Drawing.Point(144, 215);
-            this.tbComplexFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbComplexFile.Margin = new System.Windows.Forms.Padding(4);
             this.tbComplexFile.Name = "tbComplexFile";
             this.tbComplexFile.Size = new System.Drawing.Size(288, 22);
             this.tbComplexFile.TabIndex = 52;
@@ -452,7 +434,7 @@
             // tbName
             // 
             this.tbName.Location = new System.Drawing.Point(144, 183);
-            this.tbName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbName.Margin = new System.Windows.Forms.Padding(4);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(288, 22);
             this.tbName.TabIndex = 51;
@@ -518,6 +500,14 @@
             this.lTemplates.TabIndex = 999;
             this.lTemplates.Text = "Templates:";
             // 
+            // nudIdsStart
+            // 
+            this.nudIdsStart.Location = new System.Drawing.Point(167, 122);
+            this.nudIdsStart.Margin = new System.Windows.Forms.Padding(4);
+            this.nudIdsStart.Name = "nudIdsStart";
+            this.nudIdsStart.Size = new System.Drawing.Size(160, 22);
+            this.nudIdsStart.TabIndex = 4;
+            // 
             // frmHl7Generator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -540,13 +530,11 @@
             this.Controls.Add(this.lSiteId);
             this.Controls.Add(this.lIdsStart);
             this.Controls.Add(this.btnGenerate);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmHl7Generator";
             this.Text = "HL7 Batch File Generator";
             ((System.ComponentModel.ISupportInitialize)(this.nudNumToGenerate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudIdsStart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudRefsStart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSiteId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPort)).EndInit();
             this.tcSubmitType.ResumeLayout(false);
             this.tpSimple.ResumeLayout(false);
@@ -575,10 +563,10 @@
         private System.Windows.Forms.TextBox tbSimpleArgs;
         private System.Windows.Forms.Label lOutputFile;
         private System.Windows.Forms.TextBox tbOutputFile;
-        private System.Windows.Forms.NumericUpDown nudIdsStart;
         private System.Windows.Forms.NumericUpDown nudRefsStart;
         private System.Windows.Forms.TextBox tbOutput;
-        private System.Windows.Forms.NumericUpDown nudSiteId;
+        private System.Windows.Forms.TextBox nudSiteId; // RA Notes changed NumericUpDown to TextBox
+        private System.Windows.Forms.TextBox nudIdsStart;  // RA Notes changed NumericUpDown to TextBox
         private System.Windows.Forms.NumericUpDown nudPort;
         private System.Windows.Forms.TabControl tcSubmitType;
         private System.Windows.Forms.TabPage tpSimple;
